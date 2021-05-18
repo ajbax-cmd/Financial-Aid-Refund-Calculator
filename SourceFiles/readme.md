@@ -1,4 +1,3 @@
-#Financial Aid Refund Calculator
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -20,9 +19,9 @@ device.
 
 * Inside the folder named "Calculator" is the exe file that will run the .exe file that will run the program. You can right click on this file, copy it, and paste to your desktop to create a shortcut.
 
-*If using the class files for a seperate project, the class functions need to be called in the following order after the member variables have been assigned:<br>
- sort();
- calculateDisb();
- calculatePell();
- calculateLoan();
- calculateRefund();
+* If using the class files for a seperate project, the class functions need to be called in the following order after the member variables have been assigned:<br>
+ sort();<br>
+ calculateDisb();<br>
+ calculatePell();<br>
+ calculateLoan();<br>
+ calculateRefund();<br>
