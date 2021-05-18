@@ -3,6 +3,15 @@
 #include <vector>
 using namespace std;
 
+//class that creates refund objects for the Summer semester
+// After member variables have been set, class functions should be called in this order:
+// sort();
+// calculateDisb();
+// calculatePell();
+// calculateLoan();
+// calculateRefund();
+
+
 class RefundSU
 {
 private:
