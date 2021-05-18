@@ -124,7 +124,7 @@ void FallSpring()
 	int* PellPot;
 	double* SubLoanPot;
 	double* UnsubLoanPot;
-	double* Refund;
+	double* Refund;				// pointer that holds Refund amounts for each part of term
 
 
 
@@ -147,7 +147,7 @@ void FallSpring()
 		{
 			break;
 		}
-		calc->setSize(size);   // set input for RefundFS member variable size
+		calc->setSize(size);   // set int input for RefundFS member variable size
 
 
 		for (int i = 0; i < size; i++)
@@ -171,15 +171,15 @@ void FallSpring()
 					count++;
 				}
 				count++;
-				number = stoi(strinput);
-			} while (number <= 0);
+				value = stod(strinput);
+			} while (value <= 0);
 			if (count > 1)
 			{
 				cout << endl;
 			}
 			count = 0;
 			
-			calc->setCreditNumber(i, number);		// set input for RefundFS member vector CreditNumber at position i
+			calc->setCreditNumber(i, value);		// set double input for RefundFS member vector CreditNumber at position i
 
 			do
 			{
@@ -202,7 +202,7 @@ void FallSpring()
 			}while (number < 0 || number > 6);
 			count = 0;
 			
-			calc->setPot(i, number);			// set input for RefundFS member vector Pot at position i	
+			calc->setPot(i, number);			// set int input for RefundFS member vector Pot at position i	
 		}
 
 		cout << "\nPell Grant amount: ";
@@ -213,7 +213,7 @@ void FallSpring()
 			getline(cin, strinput);
 		}
 		number = stoi(strinput);
-		calc->setPell(number);						 // set input for RefundFS member variable Pell
+		calc->setPell(number);						 // set int input for RefundFS member variable Pell
 
 		cout << "\nSubsidized loan amount: ";
 		getline(cin, strinput);
@@ -223,7 +223,7 @@ void FallSpring()
 			getline(cin, strinput);
 		}
 		value = stod(strinput);
-		calc->setSub(value);						// set input for RefundFS member variable Sub
+		calc->setSub(value);						// set double input for RefundFS member variable Sub
 
 		cout << "\nUnsubsidized loan amount: ";
 		getline(cin, strinput);
@@ -233,7 +233,7 @@ void FallSpring()
 			getline(cin, strinput);
 		}
 		value = stod(strinput);
-		calc->setUnsub(value);						// set input for RefundFS member variable Unsub
+		calc->setUnsub(value);						// set double input for RefundFS member variable Unsub
 
 		cout << "\nTuition Cost: ";
 		getline(cin, strinput);
@@ -243,7 +243,7 @@ void FallSpring()
 			getline(cin, strinput);
 		}
 		value = stod(strinput);
-		calc->setCost(value);							// set input for RefundFS member variable cost
+		calc->setCost(value);							// set double input for RefundFS member variable cost
 
 		cout << "\nLoan disbursment split (Y/N): ";
 		cin >> input;									
@@ -258,7 +258,7 @@ void FallSpring()
 		PellPot = calc->getPellPot();
 		SubLoanPot = calc->getSubLoanPot();
 		UnsubLoanPot = calc->getUnsubLoanPot();
-		Refund = calc->getRefund();
+		Refund = calc->getRefund();					// get refund double output and assign it to a pointer
 		
 
 
@@ -343,7 +343,7 @@ void Summer()
 		{
 			break;
 		}
-		calc->setSize(size);   // set input for RefundSU member variable size
+		calc->setSize(size);   // set int input for RefundSU member variable size
 
 
 		for (int i = 0; i < size; i++)
@@ -367,14 +367,14 @@ void Summer()
 					count++;
 				}
 				count++;
-				number = stoi(strinput);
-			} while (number <= 0);
+				value = stod(strinput);
+			} while (value <= 0);
 			if (count > 1)
 			{
 				cout << endl;
 			}
 			count = 0;
-			calc->setCreditNumber(i, number);					// set input for RefundSU member vector CreditNumber at position i
+			calc->setCreditNumber(i, value);					// set double input for RefundSU member vector CreditNumber at position i
 
 			do
 			{
@@ -398,7 +398,7 @@ void Summer()
 			} while (number != 1 && number != 7 && number != 8 && number != 9);
 			count = 0;
 
-			calc->setPot(i, number);				// set input for RefundSU member vector Pot at position i	
+			calc->setPot(i, number);				// set int input for RefundSU member vector Pot at position i	
 		}
 
 		cout << "\nPell Grant amount: ";
@@ -409,7 +409,7 @@ void Summer()
 			getline(cin, strinput);
 		}
 		number = stoi(strinput);
-		calc->setPell(number);					// set input for RefundSU member variable Pell
+		calc->setPell(number);					// set int input for RefundSU member variable Pell
 
 		cout << "\nSubsidized loan amount: ";
 		getline(cin, strinput);
@@ -419,7 +419,7 @@ void Summer()
 			getline(cin, strinput);
 		}
 		value = stod(strinput);
-		calc->setSub(value);					// set input for RefundSU member variable Sub
+		calc->setSub(value);					// set double input for RefundSU member variable Sub
 		
 
 		cout << "\nUnsubsidized loan amount: ";
@@ -430,7 +430,7 @@ void Summer()
 			getline(cin, strinput);
 		}
 		value = stod(strinput);
-		calc->setUnsub(value);					// set input for RefundSU member variable Unsub
+		calc->setUnsub(value);					// set double input for RefundSU member variable Unsub
 		
 
 		cout << "\nTuition Cost: ";
@@ -441,7 +441,7 @@ void Summer()
 			getline(cin, strinput);
 		}
 		value = stod(strinput);
-		calc->setCost(value);					// set input for RefundFS member variable cost
+		calc->setCost(value);					// set double input for RefundFS member variable cost
 		
 
 		
@@ -455,7 +455,7 @@ void Summer()
 		PellPot = calc->getPellPot();
 		SubLoanPot = calc->getSubLoanPot();
 		UnsubLoanPot = calc->getUnsubLoanPot();
-		Refund = calc->getRefund();
+		Refund = calc->getRefund();			// 
 
 
 		cout << setprecision(2) << fixed;

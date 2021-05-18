@@ -83,7 +83,11 @@ void RefundFS::swap(int& a, int& b)
 	a = b;
 	b = temp;
 }
-
+//***************************************
+// getSum() function adds all of		*
+// the credits a student is taking		*
+// and returns the total.				*
+//***************************************
 double RefundFS::getSum()
 {
 	double total = 0;
@@ -153,7 +157,12 @@ void RefundFS::sort()
 		}
 	}
 }
-
+//***************************************************************
+// getFTPell function calculates what a student's Pell Grant	*
+// would be if they were enrolled FT (12 or more credits).		*
+// This is used in determining the breakdown of how much		*
+// Pell Grant is being disbursed for each PoT.					*
+//***************************************************************
 int RefundFS::getFTPell()
 {
 	int FTPell = 0;
