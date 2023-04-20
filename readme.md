@@ -28,3 +28,7 @@ device.
  calculatePell();<br>
  calculateLoan();<br>
  calculateRefund();<br>
+ 
+ ## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
